@@ -26,7 +26,7 @@ Problemas planteados:
 
 Inicio de la prueba -> 2:20 pm 
 Pausa: 6:09 pm - 7:57 pm
-Finalización de la prueba -> 11:30
+Finalización de la prueba -> 11:30 pm
 
 - Problema A: 2:20 pm - 6:09 pm
 - Problema B: 7:57 pm - 11:30 pm
