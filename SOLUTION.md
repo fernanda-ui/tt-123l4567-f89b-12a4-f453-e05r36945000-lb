@@ -519,7 +519,6 @@ Trade-off:
 - Más complejo de mantener
 - Dos estructuras de datos
 
----
 
 2. Lazy Deletion (Eliminación Perezosa)
 
@@ -595,7 +594,7 @@ Costo:
 
 **Casos de Uso Ideales**
 
-Esta implementación es ideal para:**
+Esta implementación es ideal para:
 - Cachés de aplicación con capacidad < 10,000 entradas
 - Datos que expiran naturalmente (sesiones, tokens)
 - Aplicaciones single-threaded
@@ -616,9 +615,8 @@ Opcion 1:
 $env:PYTHONPATH="src"; python tests\testCacheMemory.py
 
 Opcion 2:
-```bash
 python -m pytest tests/testCacheMemory.py -v
-```
+
 
 Para validar la correctitud de la implementación de CacheMemory, se crearon 16 funciones de test exhaustivas usando Python y pytest.
 
@@ -636,7 +634,7 @@ Objetivo: Verificar que las operaciones CRUD funcionan correctamente.
 - test_leer_entradas_validas: Valida que `get()` retorna valores correctos
 - test_leer_entradas_inexistentes: Verifica que `get()` retorna `None` para claves inexistentes
 
-Resultado esperado Operaciones básicas funcionan correctamente.
+Resultado esperado: Operaciones básicas funcionan correctamente.
 
 2. Tests de TTL - Time To Live (3 tests)
 
@@ -724,45 +722,6 @@ Objetivo: Probar situaciones extremas y casos límite.
   - Valida que todas las operaciones funcionan juntas
 
 Resultado esperado: Casos extremos manejados correctamente
-
-
-**Resultados de Ejecución**
-
-```
-Ejecutando tests de CacheMemory...
-
-=== Tests de operaciones básicas ===
-✓ Test agregar entradas nuevas pasó
-✓ Test actualizar entradas existentes pasó
-✓ Test eliminar entradas pasó
-✓ Test leer entradas válidas pasó
-✓ Test leer entradas inexistentes pasó
-
-=== Tests de TTL ===
-✓ Test leer entradas expiradas pasó
-✓ Test actualización TTL al usar pasó
-✓ Test actualización TTL con set pasó
-
-=== Tests de LRU ===
-✓ Test expulsión por LRU pasó
-✓ Test expulsión LRU con uso intermedio pasó
-
-=== Tests de listado ===
-✓ Test listar todas las entradas pasó
-
-=== Tests de estadísticas (BONUS) ===
-✓ Test estadísticas básicas pasó
-✓ Test estadísticas TTL expired pasó
-✓ Test estadísticas LRU evicted pasó
-
-=== Tests de casos borde ===
-✓ Test casos borde pasó
-✓ Test operaciones mixtas pasó
-
-==================================================
-✓ TODOS LOS TESTS PASARON EXITOSAMENTE (16 tests)
-==================================================
-```
 
 **Errores Encontrados y Soluciones**
 
